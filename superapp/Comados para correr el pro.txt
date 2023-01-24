@@ -1,0 +1,10 @@
+Comandos para correr proyecto
+
+1. Gradle test aggregate
+
+2. gradle test -Dcucumber.options="--tags @Login"
+
+2. Gradle clean
+
+3. Gradle clean test
+
