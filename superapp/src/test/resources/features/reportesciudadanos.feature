@@ -90,31 +90,94 @@ Característica: Realizar reportes ciudadanos en la aplicacion de SuperApp
     Entonces aparece una confirmacion de la solicitud realizada
 
     Ejemplos:
-      | direccion | puntoReferencia    | descripcion  | correo                     | tipoDaño |
-      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com | mes      |
+      | direccion | puntoReferencia    | descripcion  | correo                     | tipoDaño   |
+      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com | mes        |
+      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com | una semana |
 
 
-  @ReportesCiudadanos-Alumbrado-Publico
+  @ReportesCiudadanos-Entorno-Fisico
   Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
-    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de alumbrado publico
-    Cuando ingresa la informacion para el reporte
-      | direccion   | puntoReferencia   | descripcion   | correo   | tipoDaño   | descripcionDaño   | nombreReporta   | numeroReporta   | correoContacto   |
-      | <direccion> | <puntoReferencia> | <descripcion> | <correo> | <tipoDaño> | <descripcionDaño> | <nombreReporta> | <numeroReporta> | <correoContacto> |
+    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte Entorno fisico
+    Cuando ingresa la informacion para el reporte en Entorno fisico
+      | direccion   | puntoReferencia   | descripcion   | correoContacto   |
+      | <direccion> | <puntoReferencia> | <descripcion> | <correoContacto> |
     Entonces aparece una confirmacion de la solicitud realizada
 
     Ejemplos:
-      | direccion | puntoReferencia    | descripcion  | correo                     | tipoDaño         | descripcionDaño | nombreReporta | numeroReporta | correoContacto             |
-      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com | Cable chispeando | dato de...      | Albert        | 3118552354    | ismaelcarvajal@outlook.com |
+      | direccion | puntoReferencia    | descripcion  | correoContacto             |
+      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com |
 
 
   @ReportesCiudadanos-Contenedores-De-Basura
   Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
     Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de contenedores de basura
     Cuando ingresa la informacion para hacer el reporte
-      | direccion   | puntoReferencia   | descripcion   | correoContacto   |
-      | <direccion> | <puntoReferencia> | <descripcion> | <correoContacto> |
+      |  direccion  |  puntoReferencia  |  tipoDaño  | descripcion   | correoContacto   |
+      | <direccion> | <puntoReferencia> | <tipoDaño> |<descripcion> | <correoContacto> |
     Entonces aparece una confirmacion de la solicitud de contenedores de basura
 
     Ejemplos:
-      | direccion | puntoReferencia    | descripcion  | correoContacto                     |
+      | direccion | puntoReferencia    | tipoDaño                 |  descripcion  | correoContacto             |
+      | CL 44     | Al lado del parque | Contenedor en mal estado | plaza civica  | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | Contenedor Robado        | plaza civica  | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | Contedor incompleto      | plaza civica  | ismaelcarvajal@outlook.com |
+
+  @ReportesCiudadanos-Ocupacion-Irregular
+  Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
+    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de ocupacion irregular
+    Cuando ingresa la informacion para hacer el reporte de Ocupacion Irregular
+      | direccion   | puntoReferencia   | descripcion   | correoContacto   | observacion   |
+      | <direccion> | <puntoReferencia> | <descripcion> | <correoContacto> | <observacion> |
+    Entonces aparece una confirmacion de reporte de una ocupacion irregular
+
+    Ejemplos:
+      | direccion | puntoReferencia    | descripcion                 | correoContacto             | observacion      |
+      | CL 44     | Al lado del parque | Banqueo                     | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Demolición o desmonte       | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Conato de invasión          | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Cerramiento                 | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Eliminación de áreas verdes | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Terreno sin construcción    | ismaelcarvajal@outlook.com | Test Matias Fama |
+      | CL 44     | Al lado del parque | Deslizamiento               | ismaelcarvajal@outlook.com | Test Matias Fama |
+
+  @ReportesCiudadanos-Semaforos
+  Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
+    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de Semaforos
+    Cuando ingresa la informacion para hacer el reporte de Semaforos
+      | direccion   | puntoReferencia   |  tipoDano  | descripcion   | correoContacto   |
+      | <direccion> | <puntoReferencia> | <tipoDano> | <descripcion> | <correoContacto> |
+    Entonces aparece una confirmacion de reporte de semaforo
+
+    Ejemplos:
+      | direccion | puntoReferencia    | tipoDano             | descripcion  | correoContacto             |
+      | CL 44     | Al lado del parque | Apagado              | plaza civica | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | Intermitente         | plaza civica | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | Lámparas apagadas    | plaza civica | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | Semáforo Vandalizado | plaza civica | ismaelcarvajal@outlook.com |
+
+
+  @ReportesCiudadanos-Mal-Parqueo
+  Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
+    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de ciclo rutas
+    Cuando ingresa la informacion para hacer el reporte en ciclorutas
+      | direccion   | puntoReferencia   |  observacion  | correoContacto   |
+      | <direccion> | <puntoReferencia> | <observacion> | <correoContacto> |
+    Entonces aparece una confirmacion de reporte de ciclo rutas
+
+    Ejemplos:
+      | direccion | puntoReferencia    | observacion  | correoContacto             |
       | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com |
+      | CL 44     | Al lado del parque | plaza civica | ismaelcarvajal@outlook.com |
+
+  @ReportesCiudadanos-Reporte-De-Ciclo-Rutas
+  Esquema del escenario: Escenario: Hacer reportes desde la aplicacion superapp
+    Dado que 'Ismael' ingresa a la aplicacion superapp para hacer un reporte de mal parqueo
+    Cuando ingresa la informacion para hacer el reporte en mal parqueo
+      | direccion   | puntoReferencia   |  tipoDano  | nombreReporta   |  numeroReporta  | correoContacto  |  observacion  |
+      | <direccion> | <puntoReferencia> | <tipoDano> | <nombreReporta> | <numeroReporta> |<correoContacto> | <observacion> |
+    Entonces aparece una confirmacion de reporte de mal parqueo
+
+    Ejemplos:
+      | direccion | puntoReferencia    |  tipoDano            | nombreReporta    |  numeroReporta | correoContacto             | observacion  |
+      | CL 44     | Al lado del parque | Bicicleta Sospechosa | Ismael Caravajal |  123456789     | ismaelcarvajal@outlook.com | plaza civica |

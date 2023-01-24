@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import superapp.interactions.scroll.Scroll;
+import superapp.interactions.scroll.ScrollAndClick;
 import superapp.interactions.waits.WaitElement;
 import superapp.interactions.waits.WaitFor;
 import superapp.models.reportesciudadanos.DatosContenedoresDeBasura;
@@ -43,8 +44,14 @@ public class ContenedoresDeBasuraTask implements Task {
                 Click.on(ACEPTAR_FOTO),
                 WaitElement.isClickable(CONTINUAR_OPCION),
                 Click.on(CONTINUAR_OPCION),
+
+                WaitElement.isClickable(TIPO_DAÑO),
+                Click.on(TIPO_DAÑO),
+                ScrollAndClick.scrollAndClick(datosContenedoresDeBasura.getTipoDaño()),
+                Click.on(ACEPTAR_TIPO_DAÑO_ABEJAS),
                 WaitElement.isClickable(DESCRIPCION_CONTENEDORES),
                 Enter.theValue(datosContenedoresDeBasura.getDescripcion()).into(DESCRIPCION_CONTENEDORES),
+                Scroll.scrollUnaVista(),
                 WaitElement.isClickable(CORREO_CONTENEDORES),
                 Enter.theValue(datosContenedoresDeBasura.getCorreoContacto()).into(CORREO_CONTENEDORES),
                 Scroll.scrollUnaVista(),

@@ -171,8 +171,6 @@ public class ReportesPage extends PageObject {
 
     public static final Target HACE_CUANTO = Target.the("Hace cuanto ves el nido").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@text='Tipo de daño']]"));
 
-    public static final Target UN_MES = Target.the("Hace un mes").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@text='mes']]"));
-
     public static final Target CORREO_ABEJAS = Target.the("Correo").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Ingresa el correo electrónico de quien reporta']]"));
     public static final Target ACEPTAR_TIPO_DAÑO_ABEJAS = Target.the("Aceptar tipo daño").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@text='Aceptar']]"));
 
@@ -180,5 +178,35 @@ public class ReportesPage extends PageObject {
 
     public static final Target CONTENEDORES_BASURA = Target.the("Contenedores de basura").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@class='android.widget.ImageView'] and ./*[@text='Contenedores de basura']]"));
 
+    public static final Target ENTORNO_FISICO = Target.the("Entorno Fisico").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@text='Entornos físicos'] and ./*[@class='android.widget.ImageView']]"));
+
+    public static final Target CORREO_ENTORNO = Target.the("Correo Entorno Fisico").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Ingresa el correo electrónico de quién reporta']]"));
+
+    public static final Target DESCRIPCION_ENTORNO = Target.the("Descripcion Entorno Fisico").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Descripción']]"));
+
+    public static final Target OCUPACION_IRREGULAR = Target.the("Ocupacion Irregular").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@text='Ocupación Irregular'] and ./*[@class='android.widget.ImageView']]"));
+
+    public static final Target SEMAFORO = Target.the("Semaforo").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@class='android.widget.ImageView'] and ./*[@text='Semáforos']]"));
+
+    public static final Target CORREO_SEMAFORO = Target.the("Correo Semaforo").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Ingresa el correo electrónico de quién reporta']]"));
+
+
+    public static final Target MAL_PARQUEO = Target.the("Mal Parqueo").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@class='android.widget.ImageView'] and ./*[@text='Mal Parqueo']]"));
+
+    public static final Target MAL_PARQUEO_CORREO = Target.the("Mal Parqueo Correo").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Correo electrónico de contacto']]"));
+
+    public static final Target MAL_PARQUEO_OBSERVACION  = Target.the("Mal Parqueo Observacion").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Observación - Opcional']]"));
+
+    public static final Target CICLORUTAS = Target.the("Reporte de ciclorutas").located(MobileBy.xpath("//*[@class='android.view.ViewGroup' and ./*[@class='android.widget.ImageView'] and ./*[@text='Reporte de ciclo rutas']]"));
+
+    public static final Target CICLORUTA_NOMBRE_REPORTA = Target.the("Nombre de quien reporta").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Nombre de quién reporta']]"));
+
+    public static final Target CICLORUTA_NUMERO_CONTACTO  = Target.the("Numero de quien reporta").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Número de contacto de quién reporta']]"));
+
+    public static final Target CICLORUTA_OBSERVACION  = Target.the("Ciclorutas Observacion").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Observación - Opcional']]"));
+
+    public static final Target ACEPTAR_TECLADO  = Target.the("Aceptar Teclado").located(MobileBy.xpath("//*[@contentDescription='Realiz.']"));
+
+    public static final Target OBSERVACION_SEMAFORO  = Target.the("Obvsercacion semaforo").located(MobileBy.xpath("//*[@class='android.widget.EditText' and (./preceding-sibling::* | ./following-sibling::*)[@text='Observación - Opcional']]"));
 
 }

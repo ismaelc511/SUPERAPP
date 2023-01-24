@@ -4,11 +4,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.waits.Wait;
+import superapp.interactions.scroll.Scroll;
 import superapp.interactions.scroll.ScrollAndClick;
 import superapp.interactions.waits.WaitElement;
 import superapp.interactions.waits.WaitFor;
-import superapp.models.reportesciudadanos.DatosHuecosYBaches;
 import superapp.models.reportesciudadanos.NidoAbejas;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -28,6 +27,7 @@ public class NidoAbejasTask implements Task {
         actor.attemptsTo(
                 WaitElement.isClickable(BTN_REPORTES_CIUDADANOS),
                 Click.on(BTN_REPORTES_CIUDADANOS),
+                Scroll.scrollUnaVista(),
                 WaitElement.isClickable(NIDO_ABEJAS),
                 Click.on(NIDO_ABEJAS),
                 WaitElement.isClickable(DIRECCION_DAÑO),

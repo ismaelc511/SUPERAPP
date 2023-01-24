@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/reportesciudadanos.feature",
         glue = "superapp.stepdefinitions",
-        tags = {"@ReportesCiudadanos-Contenedores-De-Basura"},
+        tags = {"@ReportesCiudadanos-Mal-Parqueo"},
         snippets = SnippetType.CAMELCASE)
 public class ReportesCiudadanosRunner {
 }

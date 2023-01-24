@@ -150,4 +150,71 @@ public class ReportesCiudadanosDefinitions {
     }
 
 
+    @Dado("^que (.*) ingresa a la aplicacion superapp para hacer un reporte Entorno fisico$")
+    public void queIsmaelIngresaALaAplicacionSuperappParaHacerUnReporteEntornoFisico(String actor) {
+        theActorCalled(actor).attemptsTo(Home2.entrarAlHome());
+    }
+
+    @Cuando("^ingresa la informacion para el reporte en Entorno fisico$")
+    public void ingresaLaInformacionParaElReporteEnEntornoFisico(List <EntornoFisico> entornoFisicos) {
+        theActorInTheSpotlight().attemptsTo(EntornoFisicoTask.entornoFisicoTask(entornoFisicos.get(0)));
+    }
+
+    @Dado("^que (.*) ingresa a la aplicacion superapp para hacer un reporte de ocupacion irregular$")
+    public void queIsmaelIngresaALaAplicacionSuperappParaHacerUnReporteDeOcupacionIrregular(String actor) {
+        theActorCalled(actor).attemptsTo(Home2.entrarAlHome());
+    }
+
+    @Cuando("^ingresa la informacion para hacer el reporte de Ocupacion Irregular$")
+    public void ingresaLaInformacionParaHacerElReporteDeOcupacionIrregular(List <OcupacionIrregular> ocupacionIrregular) {
+        theActorInTheSpotlight().attemptsTo(OcupacionIrregularTask.ocupacionIrregularTask(ocupacionIrregular.get(0)));
+    }
+
+    @Entonces("^aparece una confirmacion de reporte de una ocupacion irregular$")
+    public void apareceUnaConfirmacionDeReporteDeUnaOcupacionIrregular() {
+
+    }
+
+    @Dado("^que (.*) ingresa a la aplicacion superapp para hacer un reporte de Semaforos$")
+    public void queIsmaelIngresaALaAplicacionSuperappParaHacerUnReporteDeSemaforos(String actor) {
+        theActorCalled(actor).attemptsTo(Home2.entrarAlHome());
+    }
+
+    @Cuando("^ingresa la informacion para hacer el reporte de Semaforos$")
+    public void ingresaLaInformacionParaHacerElReporteDeSemaforos(List <Semaforo> semaforos) {
+        theActorInTheSpotlight().attemptsTo(SemaforosTask.semaforosTask(semaforos.get(0)));
+    }
+
+    @Entonces("^aparece una confirmacion de reporte de semaforo$")
+    public void apareceUnaConfirmacionDeReporteDeSemaforo() {
+
+    }
+
+    @Dado("^que (.*) ingresa a la aplicacion superapp para hacer un reporte de ciclo rutas$")
+    public void queIsmaelIngresaALaAplicacionSuperappParaHacerUnReporteDeCicloRutas(String actor) {
+        theActorCalled(actor).attemptsTo(Home2.entrarAlHome());
+    }
+
+    @Cuando("^ingresa la informacion para hacer el reporte en ciclorutas$")
+    public void ingresaLaInformacionParaHacerElReporteEnCiclorutas(List <CicloRutas> cicloRutas) {
+        theActorInTheSpotlight().attemptsTo(CicloRutasTask.cicloRutasTask(cicloRutas.get(0)));
+    }
+
+    @Entonces("^aparece una confirmacion de reporte de ciclo rutas$")
+    public void apareceUnaConfirmacionDeReporteDeCicloRutas() {
+    }
+
+    @Dado("^que (.*) ingresa a la aplicacion superapp para hacer un reporte de mal parqueo$")
+    public void queIsmaelIngresaALaAplicacionSuperappParaHacerUnReporteDeMalParqueo(String actor) {
+        theActorCalled(actor).attemptsTo(Home2.entrarAlHome());
+    }
+
+    @Cuando("^ingresa la informacion para hacer el reporte en mal parqueo$")
+    public void ingresaLaInformacionParaHacerElReporteEnMalParqueo(List <MalParqueo> malParqueos) {
+        theActorInTheSpotlight().attemptsTo(MalParqueoTask.malParqueoTask(malParqueos.get(0)));
+    }
+
+    @Entonces("^aparece una confirmacion de reporte de mal parqueo$")
+    public void apareceUnaConfirmacionDeReporteDeMalParqueo() {
+    }
 }
